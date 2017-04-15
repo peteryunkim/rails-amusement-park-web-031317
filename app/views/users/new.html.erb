@@ -1,0 +1,20 @@
+<%=form_for(@user) do |f|%>
+<%= f.label "Name"%>
+<%= f.text_field :name%>
+<%= f.label "Password"%>
+<%= f.password_field :password%>
+<%= f.label "Password confirmation"%>
+<%= f.password_field :password_confirmation%>
+<%= f.label "Height (in inches)"%>
+
+<%= f.number_field :height%>
+<%= f.label "How happy are you? (1-5 scale)"%>
+<%= f.number_field :happiness%>
+<%= f.label "How nauseous are you? (1-5 scale)"%>
+<%= f.number_field :nausea%>
+<%= f.label "dollars => tickets"%>
+<%= f.number_field :tickets%>
+<%= f.label "Check box if you are theme park owner"%>
+<%= f.check_box :admin%>
+<%= f.submit%>
+<%end%>

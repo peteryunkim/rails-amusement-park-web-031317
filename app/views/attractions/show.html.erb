@@ -1,0 +1,16 @@
+
+
+
+<h1><%=@attraction.name%></h1>
+
+
+Tickets needed: <%=@attraction.tickets%><br />
+Minimum height: <%=@attraction.min_height%><br />
+Nausea rating: <%=@attraction.nausea_rating%><br />
+Happiness rating: <%=@attraction.happiness_rating%><br />
+
+<% if @user.admin %>
+<%= link_to "Edit Attraction", edit_ride_path %>
+<% else %>
+<%= button_to "Go on this ride", user_path(@user), :method => "get" %>
+<% end %>
